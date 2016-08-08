@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharachterRecognition.Core", "CharachterRecognition.Core\CharachterRecognition.Core.csproj", "{7DEBEB70-0401-45C7-843E-984308AEBB1E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FSharp", "FSharp", "{D84D400B-40C9-479A-B0C0-67D5732AE061}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Network", "Network\Network.fsproj", "{AF47F7AB-13AC-471A-A458-BB708E1001A7}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7DEBEB70-0401-45C7-843E-984308AEBB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DEBEB70-0401-45C7-843E-984308AEBB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DEBEB70-0401-45C7-843E-984308AEBB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DEBEB70-0401-45C7-843E-984308AEBB1E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF47F7AB-13AC-471A-A458-BB708E1001A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF47F7AB-13AC-471A-A458-BB708E1001A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF47F7AB-13AC-471A-A458-BB708E1001A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
