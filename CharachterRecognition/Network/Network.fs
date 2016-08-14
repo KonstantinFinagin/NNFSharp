@@ -1,10 +1,9 @@
 ﻿namespace Network
 
 open MathNet.Numerics.LinearAlgebra
+open Helpers
 
 type Network(sizes : int[]) = 
-
-    let sigmoid (z : Vector<double>) = z |> Vector.map(fun x -> 1.0 / (1.0 + exp x))
 
     member this.num_layers = sizes.Length
     member this.sizes = sizes
@@ -22,17 +21,33 @@ type Network(sizes : int[]) =
             result <- sigmoid(this.weights.[i] * result + this.biases.[i])
         result    
 
-    // Stochastic gradient descent
-    member this.SGD 
-        (training_data : (Vector<double> * Vector<double>)[]) 
-        (epochs : int) 
-        (mini_batch_size : int) 
-        (eta : double) 
-        (test_data : (Vector<double> * Vector<double>)[]) =
 
-
-
+    // update the network's weights and biases with a mini batch
+    member this.update_mini_batch(
+        (mini_batch : (Vector<double> * Vector<double>)[]),
+        (eta : double)) =
+        // TODO 
         1
+                
 
+    // Stochastic gradient descent
+    member this.SGD(
+        (training_data : (Vector<double> * Vector<double>)[]), 
+        (epochs : int), 
+        (mini_batch_size : int), 
+        (eta : double), 
+        (?test_data : (Vector<double> * Vector<double>)[])) =
+
+        let hasTestData = match test_data with 
+                          | Some(test_data) -> true
+                          | None -> false
+
+
+        let shuffledData = shuffle training_data
+
+        let mini_batches = training_data |> chunks mini_batch_size 
+
+        for i in 0 .. mini_batches.Length-1 do
+            this.update_mini_batch(mini_batches.[i], eta) |> ignore
 
 
