@@ -2,4 +2,5 @@
 #I __SOURCE_DIRECTORY__
 #load "load-references-debug.fsx"
 #load "../AssemblyInfo.fs"
+      "../Helpers.fs"
       "../Network.fs"
